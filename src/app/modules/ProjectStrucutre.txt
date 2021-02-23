@@ -1,0 +1,12 @@
+WorkFroce
+  Employee
+      --List
+      --Edit/Delete
+      --Add
+  Shared
+     --EmployeeSerices
+  Module
+     --Employee
+  componenets
+      --PageNatation
+      --RecordCount
