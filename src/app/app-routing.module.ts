@@ -10,7 +10,7 @@ const  routes:Routes
     {path : 'employeelist',component:EmployeeListComponent},
     {path : 'employeedetails/:Id',component:EmployeeDetailsComponent},
     {path : 'employeeform',component:EmployeeFormComponent},
-    {path : '*',component:EmployeeListComponent}
+    {path : '',component:EmployeeListComponent}
 
 ]
 
