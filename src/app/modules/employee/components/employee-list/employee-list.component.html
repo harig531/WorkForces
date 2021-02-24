@@ -1,5 +1,8 @@
+<div class="text-primary text-right mx-auto " style="width: 810px;">
+   Total of <b class="text-warning"> {{employeelist?.total}} </b>employees
+</div>
 <div class="card-deck">
- <ng-container *ngFor='let employee of employeelist?.data;'>
+ <ng-container *ngFor="let employee of employeelist?.data ">
 <div class="card m-3" style="min-width: 12rem;max-width:10.5%">
 
 <img class="card-img-top imageThumbnail" [src]="employee.avatar" asp-append-version="true"/>
@@ -8,4 +11,8 @@
 </div>
 </div>
   </ng-container>
+
+</div>
+<div class="d-flex flex-row-reverse">
+  <pagination-controls></pagination-controls>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EmployeeModel,EmployeeModelList} from '../../models/Employee'
 import { EmployeeServiceService } from '../../shared/employee-service.service';
 import { Router } from '@angular/router';
@@ -13,7 +13,9 @@ export class EmployeeListComponent implements OnInit {
   allEmployees?: EmployeeModel[];
   filteredList?: EmployeeModelList;
   employeelist?: EmployeeModelList;
-  duplicateemployeelist?: EmployeeModelList;
+  config: any;
+  @Output() public duplicateemployeelist = new EventEmitter<EmployeeModelList>();
+
   constructor(private employeeService:EmployeeServiceService, private router: Router) {
 
   }
@@ -22,9 +24,12 @@ export class EmployeeListComponent implements OnInit {
       subscribe((result: EmployeeModelList) =>
       {
       this.employeelist=result,
-      this.duplicateemployeelist=this.employeelist;
+      this.duplicateemployeelist.emit(result)
       }
       );
+
+
+
   };
 
   }

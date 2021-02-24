@@ -9,6 +9,9 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class EmployeeServiceService {
+
+  // readonly baseURI:string='https://reqres.in/api/users?page=1'
+  readonly baseURI='assets/empjson/empjson.js'
   constructor(private _http :HttpClient ){}
   allEmployees:EmployeeModel[] = [
     {
@@ -50,7 +53,7 @@ export class EmployeeServiceService {
 
 
     getEmployees(): Observable<EmployeeModelList> {
-      return this._http.get<EmployeeModelList>("https://reqres.in/api/users?page=1");
+      return this._http.get<EmployeeModelList>(this.baseURI);
   }
 
 }
