@@ -1,4 +1,4 @@
-.containers{border:1px solid #f3efef;border-radius:1}.imageThumbnail{height:150px;width:auto}.imageThumbnailform{height:300px;width:auto}
+.containers{border:1px solid #f3efef;border-radius:1}.imageThumbnail,.imageThumbnailform{height:300px;width:auto}
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
