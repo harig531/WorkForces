@@ -12,22 +12,19 @@ import {map} from 'rxjs/operators';
 export class EmployeeListComponent implements OnInit {
   allEmployees?: EmployeeModel[];
   filteredList?: EmployeeModelList;
-  employeelist?: EmployeeModelList[];
-  allEmployeesduplicate?: EmployeeModelList;
-  statusMessage:string='';
-
-  arrya:[]=[];
+  employeelist?: EmployeeModelList;
+  duplicateemployeelist?: EmployeeModelList;
   constructor(private employeeService:EmployeeServiceService, private router: Router) {
-
 
   }
   ngOnInit() {
-    // this.allEmployees = this.employeeService.listAllEmployees();
-    // this.filteredList = this.allEmployees;
       this.employeeService.getEmployees().
-      subscribe((result: EmployeeModelList) => this.allEmployeesduplicate=result);
-      console.log(this.allEmployeesduplicate);
-
+      subscribe((result: EmployeeModelList) =>
+      {
+      this.employeelist=result,
+      this.duplicateemployeelist=this.employeelist;
+      }
+      );
   };
 
   }
