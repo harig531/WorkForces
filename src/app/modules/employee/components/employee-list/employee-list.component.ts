@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { EmployeeModel,EmployeeModelList} from '../../models/Employee'
 import { EmployeeServiceService } from '../../shared/employee-service.service';
 import { Router } from '@angular/router';
-import {map} from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-employee-list',
@@ -16,7 +16,7 @@ export class EmployeeListComponent implements OnInit {
   config: any;
   @Output() public duplicateemployeelist = new EventEmitter<EmployeeModelList>();
 
-  constructor(private employeeService:EmployeeServiceService, private router: Router) {
+  constructor(private employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
 
   }
   ngOnInit() {
@@ -28,7 +28,7 @@ export class EmployeeListComponent implements OnInit {
       }
       );
 
-
+      this.toastr.success('Welcome to Workforce!', '');
 
   };
 
