@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon'
 import { ToastrModule } from 'ngx-toastr';
 import { EmployeeRegisterService } from './modules/employee/shared/employee-register.service';
 import { EmployeeServiceService } from './modules/employee/shared/employee-service.service';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { EmployeeServiceService } from './modules/employee/shared/employee-servi
     NgxPaginationModule,
     BrowserAnimationsModule,
     MatIconModule,
-    FormsModule,ReactiveFormsModule,
+    FormsModule,ReactiveFormsModule,MatButtonModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,

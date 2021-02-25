@@ -2,7 +2,7 @@
    Total of <b class="text-warning"> {{employeelist?.total}} </b>employees
 </div>
 <div class="card-deck">
- <ng-container *ngFor="let employee of employeelist?.data ">
+ <ng-container *ngFor="let employee of employeelist?.data! | paginate: { itemsPerPage: itemperpage, currentPage: page }  ">
 <div class="card m-3" style="min-width: 12rem;max-width:10.5%">
 
 <img class="card-img-top imageThumbnail" [src]="employee.avatar" asp-append-version="true"/>
@@ -14,5 +14,5 @@
 
 </div>
 <div class="d-flex flex-row-reverse">
-  <pagination-controls></pagination-controls>
+  <pagination-controls (pageChange)="page= $event"></pagination-controls>
 </div>
