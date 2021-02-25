@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeModel,EmployeeModelList} from '../../models/Employee';
 import { ToastrService } from 'ngx-toastr';
 import { EmployeeRegisterService } from '../../shared/employee-register.service';
+
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
@@ -10,6 +11,9 @@ import { EmployeeRegisterService } from '../../shared/employee-register.service'
 export class EmployeeFormComponent implements OnInit {
 
   employeeobj?:EmployeeModel;
+
+
+
 
 
   constructor(public service : EmployeeRegisterService,private toastr: ToastrService) { }

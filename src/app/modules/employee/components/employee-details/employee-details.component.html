@@ -38,15 +38,13 @@
         <div class="col-sm-10">
           <div class="button-row">
             <button mat-raised-button color="primary" type="submit" [disabled]="">Update</button>
-            <button mat-raised-button color="warn" type="submit" [disabled]="">Remove</button>
-            <button mat-raised-button [routerLink]="['/employeelist']" type="submit" color="warn">Back</button>
+            <button mat-raised-button color="warn" (click)="confirmDialog()" type="submit" [disabled]="">Remove</button>
+            <button mat-raised-button [routerLink]="['/employeelist']" type="submit" color="accent">Back</button>
           </div>
       </div>
     </div>
 	</div>
 </div>
-
-
 </form>
 </div>
 

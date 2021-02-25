@@ -8,25 +8,25 @@ import { EmployeeDetailsComponent } from './modules/employee/components/employee
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon'
 import { ToastrModule } from 'ngx-toastr';
 import { EmployeeRegisterService } from './modules/employee/shared/employee-register.service';
 import { EmployeeServiceService } from './modules/employee/shared/employee-service.service';
-import {MatButtonModule} from '@angular/material/button';
+import { CutomsDialogComponent } from './modules/employee/shared/cutoms-dialog/cutoms-dialog.component';
+import { CustomMaterialModuleModule } from './modules/employee/shared/custom-material-module/custom-material-module.module';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,CutomsDialogComponent
   ],
   imports: [
+    CustomMaterialModuleModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    FormsModule,ReactiveFormsModule,MatButtonModule,
+    FormsModule,ReactiveFormsModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,
@@ -36,6 +36,7 @@ import {MatButtonModule} from '@angular/material/button';
     ),
   ],
   providers: [EmployeeRegisterService,EmployeeServiceService],
+  entryComponents: [CutomsDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
