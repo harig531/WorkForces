@@ -8,7 +8,7 @@ import { EmployeeListComponent } from './modules/employee/components/employee-li
 const  routes:Routes
  = [
     {path : 'employeelist',component:EmployeeListComponent},
-    {path : 'employeedetails/:Id',component:EmployeeDetailsComponent},
+    {path : 'employeedetails',component:EmployeeDetailsComponent},
     {path : 'employeeform',component:EmployeeFormComponent},
     {path : '',component:EmployeeListComponent}
 

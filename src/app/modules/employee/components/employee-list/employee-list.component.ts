@@ -32,6 +32,12 @@ export class EmployeeListComponent implements OnInit {
 
   };
 
+
+  empdeils(emp:EmployeeModel)
+  {
+    this.employeeService.formdata=emp;
+    this.router.navigate(["employeedetails"]);
   }
+}
 
 

@@ -56,11 +56,12 @@ export class EmployeeServiceService {
 
 
 
+
+    formdata:EmployeeModel= new EmployeeModel();
+
     getEmployees(): Observable<EmployeeModelList> {
       return this._http.get<EmployeeModelList>(this.baseURI);
   }
-
-
 
 
   getImployees(): Observable<IEmployeeModelList> {

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { EmployeeModel } from '../../models/Employee';
 import { ConfirmDialogModel, CutomsDialogComponent } from '../../shared/cutoms-dialog/cutoms-dialog.component';
+import { EmployeeRegisterService } from '../../shared/employee-register.service';
+import { EmployeeServiceService } from '../../shared/employee-service.service';
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
@@ -23,8 +26,10 @@ export class EmployeeDetailsComponent implements OnInit {
       this.toastr.error('Record deleted successfully');
     });
   }
-  constructor(public dialog: MatDialog,private toastr: ToastrService) { }
+  constructor(public dialog: MatDialog,private toastr: ToastrService,public service : EmployeeServiceService) { }
+  empdata:EmployeeModel= new EmployeeModel()
   ngOnInit(): void {
+    this.empdata=this.service.formdata;
   }
 
 }

@@ -5,32 +5,35 @@
 	<div class="col-md-4">
       <div class="card m-4 center">
           <div class="card">
-              <div class="card-body text-center">
-                  <img class="card-img-top imageThumbnailform" src="assets/img/noimage.png" asp-append-version="true" />
+              <div class="text-center">
+                  <img class="card-img-top imageThumbnailform" [src]="service.formdata.avatar" asp-append-version="true" />
               </div>
           </div>
       </div>
 	</div>
-	<div class="col-md-7">
+	<div class="col-md-7 m-4">
     <div class="form-group">
-      <label for="first_name">First Name</label>
-      <input type="text" class="form-control" name="first_name" id="name"
-       placeholder="First Name" formControlName='first_name'>
+      <label>First Name</label>
+      <input class="form-control" placeholder="First Name" name="first_name"
+          #first_name="ngModel" [(ngModel)]="service.formdata.first_name"
+          required  [class.invalid]="first_name.invalid && first_name.touched">
     </div>
     <div class="form-group">
       <label for="last_name">Last Name</label>
-      <input type="text" class="form-control" name="last_name" id="position"
-       placeholder="Last Name" formControlName='last_name'>
+      <input class="form-control" placeholder="Last Name" name="last_name"
+      #last_name="ngModel" [(ngModel)]="service.formdata.last_name"
+      required  [class.invalid]="last_name.invalid && last_name.touched">
     </div>
     <div class="form-group">
       <label for="Email">Email Address</label>
-      <input type="text" class="form-control" name="Email" id="Email"
-       placeholder="Email Address"  formControlName='Email'>
+      <input class="form-control" placeholder="Email Address" name="email"
+      #email="ngModel" [(ngModel)]="service.formdata.email"
+      required  [class.invalid]="email.invalid && email.touched">
     </div>
     <div class="form-group">
       <label for="avatar">Upload Photo</label>
           <div class="custom-file">
-              <input for="avatar" class="form-control custom-file-input" formControlName='avatar'>
+              <input for="avatar" class="form-control custom-file-input" name="avatar"   #avatar="ngModel"   [(ngModel)]="service.formdata.avatar">
               <label class="custom-file-label">Choose File...</label>
           </div>
        </div>
