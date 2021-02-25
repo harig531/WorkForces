@@ -28,7 +28,7 @@ export class EmployeeListComponent implements OnInit {
       this.duplicateemployeelist.emit(result)
       }
       );
-      this.toastr.success('Welcome to Workforce!', '');
+      // this.toastr.success('Welcome to Workforce!', '');
 
   };
 

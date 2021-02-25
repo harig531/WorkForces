@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { EmployeeModel } from '../../models/Employee';
 import { ConfirmDialogModel, CutomsDialogComponent } from '../../shared/cutoms-dialog/cutoms-dialog.component';
@@ -23,10 +24,13 @@ export class EmployeeDetailsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(dialogResult => {
       this.result = dialogResult;
       if(this.result)
-      this.toastr.error('Record deleted successfully');
+      {
+         this.router.navigate(["employeelist"]);
+         this.toastr.error('Record deleted successfully');
+      }
     });
   }
-  constructor(public dialog: MatDialog,private toastr: ToastrService,public service : EmployeeServiceService) { }
+  constructor(public dialog: MatDialog,private toastr: ToastrService,public service : EmployeeServiceService,private router: Router) { }
   empdata:EmployeeModel= new EmployeeModel()
   ngOnInit(): void {
     this.empdata=this.service.formdata;
