@@ -3,6 +3,7 @@ import { EmployeeModel,EmployeeModelList,IEmployeeModel,IEmployeeModelList} from
 import { EmployeeServiceService } from '../../shared/employee-service.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-employee-list',
@@ -17,7 +18,7 @@ export class EmployeeListComponent implements OnInit {
    itemperpage: number = 8;
 
 
-  constructor(public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
+  constructor(public dom: DomSanitizer,public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
 
   }
   ngOnInit() {
