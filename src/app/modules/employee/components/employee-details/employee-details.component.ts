@@ -14,7 +14,7 @@ import { EmployeeServiceService } from '../../shared/employee-service.service';
 export class EmployeeDetailsComponent implements OnInit {
 
   result: boolean=false;
-  confirmDialog(): void {
+  confirmDialog(emp:EmployeeModel): void {
     const message = `Are you sure you want to Delete this?`;
     const dialogData = new ConfirmDialogModel("Confirm Action", message);
     const dialogRef = this.dialog.open(CutomsDialogComponent, {
@@ -25,6 +25,7 @@ export class EmployeeDetailsComponent implements OnInit {
       this.result = dialogResult;
       if(this.result)
       {
+        this.service.empjsondata[0].data=this.service.empjsondata[0].data?.filter(({ id }) => id !== emp.id)
          this.router.navigate(["employeelist"]);
          this.toastr.error('Record deleted successfully');
       }
@@ -34,6 +35,10 @@ export class EmployeeDetailsComponent implements OnInit {
   empdata:EmployeeModel= new EmployeeModel()
   ngOnInit(): void {
     this.empdata=this.service.formdata;
+  }
+
+  updateemployee(emp:EmployeeModel):void{
+    this.router.navigate(["employeelist"]);
   }
 
 }

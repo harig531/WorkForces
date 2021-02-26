@@ -11,24 +11,27 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class EmployeeListComponent implements OnInit {
   filteredList?: IEmployeeModelList;
-  @Input('data') employeelist?: IEmployeeModelList;
+   employeelist?: IEmployeeModelList;
   config: any;
    page: number = 1;
    itemperpage: number = 8;
-  @Output() public duplicateemployeelist = new EventEmitter<EmployeeModelList>();
 
-  constructor(private employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
+
+  constructor(public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
 
   }
   ngOnInit() {
+
+    if(this.employeeService.empjsondata.length==0)
+    {
+
       this.employeeService.getEmployees().
       subscribe((result: IEmployeeModelList) =>
       {
-      this.employeelist=result,
-      this.duplicateemployeelist.emit(result)
+      this.employeeService.empjsondata.push(result);
       }
-      );
-      // this.toastr.success('Welcome to Workforce!', '');
+      )
+    }
 
   };
 

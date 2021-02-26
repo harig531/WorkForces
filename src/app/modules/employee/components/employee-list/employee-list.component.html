@@ -1,8 +1,9 @@
+
 <div class="text-primary text-right">
-   Total of <b class="text-warning"> {{employeelist?.total}} </b>employees
+   Total of <b class="text-warning"> {{this.employeeService.empjsondata[0].data?.length}} </b>employees
 </div>
 <div class="card-deck">
- <ng-container *ngFor="let employee of employeelist?.data! | paginate: { itemsPerPage: itemperpage, currentPage: page }  ">
+ <ng-container *ngFor="let employee of this.employeeService!.empjsondata[0]!.data! | paginate: { itemsPerPage: itemperpage, currentPage: page }  ">
 <div class="card m-3" style="min-width: 12rem;max-width:10.5%">
 
 <img class="card-img-top imageThumbnail" [src]="employee.avatar" asp-append-version="true"/>
