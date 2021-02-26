@@ -5,8 +5,10 @@
 <div class="card-deck">
  <ng-container *ngFor="let employee of this.employeeService!.empjsondata[0]!.data! | paginate: { itemsPerPage: itemperpage, currentPage: page }  ">
 <div class="card m-3" style="min-width: 12rem;max-width:10.5%">
+  <img class="card-img-top imageThumbnail" [src]="this.employee.avatar"/>
 
-<img class="card-img-top imageThumbnail" [src]="employee.avatar" asp-append-version="true"/>
+
+<!-- <img class="card-img-top imageThumbnail" [src]="employee!.avatar"/> -->
 <div class="card-footer text-center" >
   <a (click)='empdeils(employee)'> {{employee.first_name}}   {{employee.last_name}} </a>
 </div>

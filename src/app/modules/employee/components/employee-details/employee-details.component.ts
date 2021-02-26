@@ -40,6 +40,18 @@ export class EmployeeDetailsComponent implements OnInit {
   updateemployee(emp:EmployeeModel):void{
     this.router.navigate(["employeelist"]);
   }
+  image= 'assets/img/noimage.png';
+  fileToUpload: any;
+fileChange(e:any) {
+  this.fileToUpload = e.srcElement.files[0];
+  // this.image = window.URL.createObjectURL(file);
+  let reader = new FileReader();
+  reader.onload = (event: any) => {
+    this.service.formdata.avatar = event.target.result;
+  }
+  reader.readAsDataURL(this.fileToUpload);
+}
+
 
 
 
