@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EmployeeModel,EmployeeModelList} from '../../models/Employee';
 import { ToastrService } from 'ngx-toastr';
-import { EmployeeRegisterService } from '../../shared/employee-register.service';
+import { EmployeeServiceService } from '../../shared/employee-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-form',
@@ -10,41 +11,29 @@ import { EmployeeRegisterService } from '../../shared/employee-register.service'
 })
 export class EmployeeFormComponent implements OnInit {
 
-  employeeobj?:EmployeeModel;
+ employeeobj?:EmployeeModel= new EmployeeModel();
+
+ last_name?:string;
 
 
-
-
-
-  constructor(public service : EmployeeRegisterService,private toastr: ToastrService) { }
+  constructor(public service : EmployeeServiceService,private toastr: ToastrService,private router: Router) { }
   ngOnInit(): void {
 
   }
 
-  onSubmit() {
-    // this.service.register().subscribe(
-    //   (res: any) => {
-    //     if (res.succeeded) {
-    //       this.service.formModel.reset();
-    //       this.toastr.success('New user created!', 'Registration successful.');
-    //     } else {
-    //       res.errors.forEach((element: { code: any; description: any; }) => {
-    //         switch (element.code) {
-    //           case 'DuplicateUserName':
-    //             this.toastr.error('Username is already taken','Registration is failed.');
-    //             break;
 
-    //           default:
-    //           this.toastr.error(element.description,'Registration is failed.');
-    //             break;
-    //         }
-    //       });
-    //     }
-    //   },
-    //   err => {
-    //     console.log(err);
-    //   }
-    // );
-  }
+  onSubmit() {
+    var body = {
+      id : this.service.empjsondata[0].data?.length!+1,
+      avatar: 'assets/img/noimage.png',
+      first_name :this.service.formdata.first_name,
+      last_name :this.service.formdata.last_name,
+      email :this.service.formdata.email
+    }
+    this.service.empjsondata[0].data?.push(body);
+    this.router.navigate(["employeelist"]);
+    this.toastr.success('Record Created successfully');
+}
+
 
 }

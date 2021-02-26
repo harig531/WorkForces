@@ -13,20 +13,21 @@ import { EmployeeRegisterService } from './modules/employee/shared/employee-regi
 import { EmployeeServiceService } from './modules/employee/shared/employee-service.service';
 import { CutomsDialogComponent } from './modules/employee/shared/cutoms-dialog/cutoms-dialog.component';
 import { CustomMaterialModuleModule } from './modules/employee/shared/custom-material-module/custom-material-module.module';
+import { EmployeeFormComponent } from './modules/employee/components/employee-form/employee-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent,CutomsDialogComponent
+    EmployeeDetailsComponent,CutomsDialogComponent,EmployeeFormComponent
   ],
   imports: [
-    CustomMaterialModuleModule,
     BrowserModule,
+    FormsModule,ReactiveFormsModule,
+    CustomMaterialModuleModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
-    FormsModule,ReactiveFormsModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,
