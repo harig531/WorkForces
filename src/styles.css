@@ -3,6 +3,11 @@
 .button-row button{
   margin: 5px;
 }
+
+.mat-button-wrapper
+{
+  margin: 5px;
+}
 .containers {
   border: 1px solid #f3efef;
   border-radius: 1;

@@ -4,6 +4,8 @@ import { EmployeeServiceService } from '../../shared/employee-service.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { DomSanitizer } from '@angular/platform-browser';
+import { EmployeeFormComponent } from '../employee-form/employee-form.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-list',
@@ -18,7 +20,7 @@ export class EmployeeListComponent implements OnInit {
    itemperpage: number = 8;
 
 
-  constructor(public dom: DomSanitizer,public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
+  constructor(public dialog: MatDialog,public dom: DomSanitizer,public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
 
   }
   ngOnInit() {
@@ -42,6 +44,22 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.formdata=emp;
     this.router.navigate(["employeedetails"]);
   }
+
+
+  openDialog(): void {
+    this.employeeService.IsButtonShow=true;
+    const dialogRef = this.dialog.open(EmployeeFormComponent,{
+      width: '940px',disableClose: false
+    });
+}
+
+  adduser(): void {
+    this.employeeService.IsButtonShow=true;
+    const dialogRef = this.dialog.open(EmployeeFormComponent,{
+      width: '440px',disableClose: false
+    });
+  }
+
 }
 
 

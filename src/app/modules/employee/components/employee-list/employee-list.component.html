@@ -1,7 +1,28 @@
 
 <div class="text-primary text-right">
+  <div>
    Total of <b class="text-warning"> {{this.employeeService.empjsondata[0].data?.length}} </b>employees
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)=" openDialog()">
+        <mat-icon>person_add</mat-icon>
+        <span>Add User</span>
+      </button>
+      <!-- <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button> -->
+    </mat-menu>
+  </div>
 </div>
+
 <div class="card-deck">
  <ng-container *ngFor="let employee of this.employeeService!.empjsondata[0]!.data! | paginate: { itemsPerPage: itemperpage, currentPage: page }  ">
 <div class="card m-3" style="min-width: 12rem;max-width:10.5%">

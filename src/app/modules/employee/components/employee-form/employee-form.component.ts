@@ -4,7 +4,8 @@ import { ToastrService } from 'ngx-toastr';
 import { EmployeeServiceService } from '../../shared/employee-service.service';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogModel, CutomsDialogComponent } from '../../shared/cutoms-dialog/cutoms-dialog.component';
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
@@ -16,8 +17,8 @@ export class EmployeeFormComponent implements OnInit {
 
  last_name?:string;
  image= 'assets/img/noimage.png';
-
-  constructor(public _domsant: DomSanitizer,public service : EmployeeServiceService,private toastr: ToastrService,private router: Router) {
+ result: boolean=false;
+  constructor(public dialog: MatDialog,public _domsant: DomSanitizer,public service : EmployeeServiceService,private toastr: ToastrService,private router: Router) {
 
     service.formdata = new EmployeeModel()
    }
@@ -36,6 +37,7 @@ export class EmployeeFormComponent implements OnInit {
     }
     this.service.empjsondata[0].data?.push(body);
     this.router.navigate(["employeelist"]);
+    this.dialog.closeAll();
     this.toastr.success('Record Created successfully');
 }
 fileToUpload: any;
@@ -51,7 +53,22 @@ fileChange(e:any) {
 }
 
 
-
+opencancelDialog(): void {
+  const message = `Are you sure you want to discard the changes?`;
+  const dialogData = new ConfirmDialogModel("Confirm Action", message);
+  const dialogRef = this.dialog.open(CutomsDialogComponent, {
+    maxWidth: "400px",
+    data: dialogData
+  });
+  dialogRef.afterClosed().subscribe(dialogResult => {
+    this.result = dialogResult;
+    if(this.result)
+    {
+      this.service.IsButtonShow=false;
+      this.dialog.closeAll();
+    }
+  });
+}
 
 
 }

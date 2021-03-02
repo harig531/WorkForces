@@ -14,6 +14,7 @@ import { EmployeeServiceService } from './modules/employee/shared/employee-servi
 import { CutomsDialogComponent } from './modules/employee/shared/cutoms-dialog/cutoms-dialog.component';
 import { CustomMaterialModuleModule } from './modules/employee/shared/custom-material-module/custom-material-module.module';
 import { EmployeeFormComponent } from './modules/employee/components/employee-form/employee-form.component';
+import { MatMenuModule} from '@angular/material/menu'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { EmployeeFormComponent } from './modules/employee/components/employee-fo
     HttpClientModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
+    MatMenuModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,

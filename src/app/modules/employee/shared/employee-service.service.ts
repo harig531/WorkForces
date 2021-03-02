@@ -14,7 +14,7 @@ export class EmployeeServiceService {
  readonly baseURI='assets/empjson/empjson.js'
  formdata:EmployeeModel= new EmployeeModel();
  empjsondata:EmployeeModelList[]=[];
-
+ IsButtonShow:boolean=false;
   constructor(private _http :HttpClient ){}
 
     getEmployees(): Observable<EmployeeModelList> {
