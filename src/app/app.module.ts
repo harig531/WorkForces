@@ -15,7 +15,9 @@ import { CutomsDialogComponent } from './modules/employee/shared/cutoms-dialog/c
 import { CustomMaterialModuleModule } from './modules/employee/shared/custom-material-module/custom-material-module.module';
 import { EmployeeFormComponent } from './modules/employee/components/employee-form/employee-form.component';
 import { MatMenuModule} from '@angular/material/menu'
-
+import { NgxSpinnerModule } from "ngx-spinner";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,9 @@ import { MatMenuModule} from '@angular/material/menu'
     NgxPaginationModule,
     BrowserAnimationsModule,
     MatMenuModule,
+    NgxSpinnerModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,

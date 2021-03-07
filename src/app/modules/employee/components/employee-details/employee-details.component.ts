@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+
 import { ToastrService } from 'ngx-toastr';
 import { EmployeeModel } from '../../models/Employee';
 import { ConfirmDialogModel, CutomsDialogComponent } from '../../shared/cutoms-dialog/cutoms-dialog.component';
-import { EmployeeRegisterService } from '../../shared/employee-register.service';
+
 import { EmployeeServiceService } from '../../shared/employee-service.service';
 @Component({
   selector: 'app-employee-details',
@@ -33,12 +34,15 @@ export class EmployeeDetailsComponent implements OnInit {
   }
   constructor(public dialog: MatDialog,private toastr: ToastrService,public service : EmployeeServiceService,private router: Router) { }
   empdata:EmployeeModel= new EmployeeModel()
+
+
   ngOnInit(): void {
     this.empdata=this.service.formdata;
   }
 
   updateemployee(emp:EmployeeModel):void{
     this.router.navigate(["employeelist"]);
+    this.toastr.success("Updated Record")
   }
   image= 'assets/img/noimage.png';
   fileToUpload: any;

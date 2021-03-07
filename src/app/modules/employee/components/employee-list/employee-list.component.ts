@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { DomSanitizer } from '@angular/platform-browser';
 import { EmployeeFormComponent } from '../employee-form/employee-form.component';
 import { MatDialog } from '@angular/material/dialog';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-employee-list',
@@ -24,7 +25,6 @@ export class EmployeeListComponent implements OnInit {
 
   }
   ngOnInit() {
-
     if(this.employeeService.empjsondata.length==0)
     {
 
