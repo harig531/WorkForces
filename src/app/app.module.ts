@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './modules/employee/components/employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './modules/employee/components/employee-details/employee-details.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { EmployeeRegisterService } from './modules/employee/shared/employee-register.service';
@@ -15,6 +15,7 @@ import { CutomsDialogComponent } from './modules/employee/shared/cutoms-dialog/c
 import { CustomMaterialModuleModule } from './modules/employee/shared/custom-material-module/custom-material-module.module';
 import { EmployeeFormComponent } from './modules/employee/components/employee-form/employee-form.component';
 import { MatMenuModule} from '@angular/material/menu'
+
 @NgModule({
   declarations: [
     AppComponent,

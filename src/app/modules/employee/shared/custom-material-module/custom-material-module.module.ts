@@ -8,7 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+  }
 const materialModules = [
   MatButtonModule, MatDialogModule,MatIconModule,MatDatepickerModule,MatNativeDateModule,MatFormFieldModule,MatInputModule,MatGridListModule
 ]
@@ -17,10 +23,18 @@ const materialModules = [
   declarations: [],
   imports: [
     CommonModule,
+    TranslateModule.forRoot({
+      loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient]
+      }
+      }),
     ...materialModules
   ],
   exports: [
-    ...materialModules
+    ...materialModules,
+    TranslateModule
   ]
 })
 export class CustomMaterialModuleModule { }

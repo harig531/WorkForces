@@ -1,0 +1,17 @@
+{
+	"login": {
+    "Language-tel":"తెలుగు",
+    "Language-eng":"ఆంగ్ల",
+    "Language-arb":"అరబిక్",
+    "Language-hin":"హిందీ"
+  },
+  "EmployeeList":
+  {
+    "employees-header":"వర్క్‌ఫోర్స్",
+    "employees-menu":"ఉద్యోగులు",
+    "employees-Add":"ఉద్యోగులను జోడించండి",
+    "employees-count":"మొత్తం",
+    "employees-list":"ఉద్యోగుల జాబితా"
+  }
+
+}

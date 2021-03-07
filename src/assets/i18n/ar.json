@@ -1,0 +1,16 @@
+{
+	"login": {
+    "Language-tel":"التيلجو",
+    "Language-eng":"الإنجليزية",
+    "Language-arb":"عربي",
+    "Language-hin":"هندي"
+	},
+  "EmployeeList":
+  {
+    "employees-header":"قوة العمل",
+    "employees-menu":"الموظفين",
+    "employees-Add":"أضف موظفين",
+    "employees-count":"مجموع ال"
+
+  }
+}
