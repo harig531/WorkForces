@@ -39,6 +39,10 @@ export class AppComponent {
 
     setTransLanguage(lang:string){
       this.translate.use(lang);
+      this.spinner.show();
+      setTimeout(() => {
+        this.spinner.hide();
+      }, 500);
       }
 
 }

@@ -21,7 +21,7 @@ export class EmployeeListComponent implements OnInit {
    itemperpage: number = 8;
 
 
-  constructor(public dialog: MatDialog,public dom: DomSanitizer,public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService) {
+  constructor(public dialog: MatDialog,public dom: DomSanitizer,public employeeService:EmployeeServiceService, private router: Router,private toastr: ToastrService,private spinner: NgxSpinnerService) {
 
   }
   ngOnInit() {
@@ -47,6 +47,10 @@ export class EmployeeListComponent implements OnInit {
 
 
   openDialog(): void {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 500);
     this.employeeService.IsButtonShow=true;
     const dialogRef = this.dialog.open(EmployeeFormComponent,{
       width: '940px',disableClose: false
