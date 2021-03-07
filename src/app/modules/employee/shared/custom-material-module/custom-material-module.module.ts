@@ -13,7 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
   }
 const materialModules = [
   MatButtonModule, MatDialogModule,MatIconModule,MatDatepickerModule,MatNativeDateModule,MatFormFieldModule,MatInputModule,MatGridListModule
