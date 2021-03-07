@@ -1,0 +1,15 @@
+{
+	"login": {
+    "Language-tel":"तेलुगू",
+    "Language-eng":"अंग्रेज़ी",
+    "Language-arb":"अरबी",
+    "Language-hin":"हिन्दी"
+	},
+  "EmployeeList":
+  {
+    "employees-header":"कार्यबल",
+    "employees-menu":"कर्मचारियों",
+    "employees-Add":"कर्मचारी जोड़ें",
+    "employees-count":"कुल"
+  }
+}

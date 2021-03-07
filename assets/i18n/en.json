@@ -1,0 +1,16 @@
+{
+	"login": {
+    "Language-tel":"Telugu",
+    "Language-eng":"English",
+    "Language-arb":"Arabic",
+    "Language-hin":"Hindi"
+	},
+  "EmployeeList":
+  {
+    "employees-header":"WorkForce",
+    "employees-menu":"Employees",
+    "employees-Add":"Add Employees",
+    "employees-count":"Total of",
+    "employees-list":"Total of"
+  }
+}
