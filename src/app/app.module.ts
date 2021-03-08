@@ -18,6 +18,7 @@ import { MatMenuModule} from '@angular/material/menu'
 import { NgxSpinnerModule } from "ngx-spinner";
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { BnNgIdleService } from 'bn-ng-idle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
       }
     ),
   ],
-  providers: [EmployeeRegisterService,EmployeeServiceService],
+  providers: [EmployeeRegisterService,EmployeeServiceService,BnNgIdleService],
   entryComponents: [CutomsDialogComponent],
   bootstrap: [AppComponent]
 })
