@@ -10,6 +10,7 @@
     "employees-header":"कार्यबल",
     "employees-menu":"कर्मचारियों",
     "employees-Add":"कर्मचारी जोड़ें",
-    "employees-count":"कुल"
+    "employees-count":"कुल",
+    "ngRX" : "NGRX Demo"
   }
 }

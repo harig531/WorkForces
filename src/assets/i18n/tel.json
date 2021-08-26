@@ -11,7 +11,8 @@
     "employees-menu":"ఉద్యోగులు",
     "employees-Add":"ఉద్యోగులను జోడించండి",
     "employees-count":"మొత్తం",
-    "employees-list":"ఉద్యోగుల జాబితా"
+    "employees-list":"ఉద్యోగుల జాబితా",
+    "ngRX" : "NGRX Demo"
   }
 
 }

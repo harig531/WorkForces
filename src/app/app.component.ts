@@ -65,6 +65,11 @@ export class AppComponent {
           this.isPopUpOpen=false;
           if(this.result)
           {
+            this.router.navigate(["employeelist"]);
+            this.bnIdle.resetTimer();
+          }
+          else
+          {
             this.bnIdle.resetTimer();
           }
         })

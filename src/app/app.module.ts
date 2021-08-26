@@ -19,11 +19,14 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { BnNgIdleService } from 'bn-ng-idle';
+import { NgrxexmpComponent } from './ngrx/ngrxexmp/ngrxexmp.component';
+import { CustomobserbalComponent } from './ngrx/customobserbal/customobserbal.component';
+import { MyChartComponent } from './modules/employee/components/my-chart/my-chart.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent,CutomsDialogComponent,EmployeeFormComponent
+    EmployeeDetailsComponent,CutomsDialogComponent,EmployeeFormComponent, NgrxexmpComponent, CustomobserbalComponent, MyChartComponent
   ],
   imports: [
     BrowserModule,

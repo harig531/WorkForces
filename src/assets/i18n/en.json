@@ -11,6 +11,7 @@
     "employees-menu":"Employees",
     "employees-Add":"Add Employees",
     "employees-count":"Total of",
-    "employees-list":"Total of"
+    "employees-list":"Total of",
+    "ngRX" : "NGRX Demo"
   }
 }
