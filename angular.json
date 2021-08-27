@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "workforce"
+  "defaultProject": "workforce",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,194 @@
+[
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:50",
+        "value": 43
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:51",
+        "value": 4
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:52",
+        "value": 4
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:53",
+        "value": 3
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:54",
+        "value": 5
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:55",
+        "value": 12
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:56",
+        "value": 20
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "AvgResponseTime",
+        "time": "2020-11-09 16:27:57",
+        "value": 14
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:50",
+        "value": 4465
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:51",
+        "value": 5564
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:52",
+        "value": 4873
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:53",
+        "value": 5948
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:54",
+        "value": 4265
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:55",
+        "value": 854
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:56",
+        "value": 1482
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "FailedPerSecond",
+        "time": "2020-11-09 16:27:57",
+        "value": 182
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:50",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:51",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:52",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:53",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:54",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:55",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:56",
+        "value": 0
+    },
+    {
+        "testStepActionConfigId": 1266,
+        "requestDescription": "MarketSettingsAPI - Get Bulk Settings",
+        "testRunNumber": 3,
+        "type": "SuccessPerSecond",
+        "time": "2020-11-09 16:27:57",
+        "value": 0
+    }
+]
