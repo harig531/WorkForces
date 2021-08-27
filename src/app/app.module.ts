@@ -21,12 +21,19 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { BnNgIdleService } from 'bn-ng-idle';
 import { NgrxexmpComponent } from './ngrx/ngrxexmp/ngrxexmp.component';
 import { CustomobserbalComponent } from './ngrx/customobserbal/customobserbal.component';
-import { MyChartComponent } from './modules/employee/components/my-chart/my-chart.component';
+import { MyChartComponent } from './Charts/my-chart/my-chart.component';
+import * as PlotlyJS from 'plotly.js-dist-min';
+import { PlotlyModule } from 'angular-plotly.js';
+import { ChartPlotlyComponent } from './Charts/chart-plotly/chart-plotly.component';
+
+
+PlotlyModule.plotlyjs = PlotlyJS;
+
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent,CutomsDialogComponent,EmployeeFormComponent, NgrxexmpComponent, CustomobserbalComponent, MyChartComponent
+    EmployeeDetailsComponent,CutomsDialogComponent,EmployeeFormComponent, NgrxexmpComponent, CustomobserbalComponent, MyChartComponent, ChartPlotlyComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ import { MyChartComponent } from './modules/employee/components/my-chart/my-char
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    PlotlyModule,
     ToastrModule.forRoot(
       {
         timeOut: 1000,

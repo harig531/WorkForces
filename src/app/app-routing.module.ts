@@ -4,7 +4,8 @@ import { EmployeeDetailsComponent } from './modules/employee/components/employee
 import { EmployeeFormComponent } from './modules/employee/components/employee-form/employee-form.component';
 import { EmployeeListComponent } from './modules/employee/components/employee-list/employee-list.component';
 import { NgrxexmpComponent } from './ngrx/ngrxexmp/ngrxexmp.component';
-import { MyChartComponent } from './modules/employee/components/my-chart/my-chart.component';
+import { MyChartComponent } from './Charts/my-chart/my-chart.component';
+import { ChartPlotlyComponent } from './Charts/chart-plotly/chart-plotly.component';
  
 const  routes:Routes
  = [
@@ -13,6 +14,7 @@ const  routes:Routes
     {path : 'employeeform',component:EmployeeFormComponent},
     {path : 'ngrxExmp',component:NgrxexmpComponent},
     {path : 'mychart',component:MyChartComponent},
+    {path : 'PolyChart',component:ChartPlotlyComponent},
     {path : '',component:EmployeeListComponent}
 
 ]
